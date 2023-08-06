@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -34,6 +34,11 @@
     "trailingComma": "es5"
   },
   "name": "@antonio-costa/react-use-modal",
+  "homepage": "https://github.com/antonio-costa/react-use-modal/tree/master",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonio-costa/react-use-modal.git"
+  },
   "author": "antonio.costa",
   "module": "dist/react-modal-manager.esm.js",
   "size-limit": [
