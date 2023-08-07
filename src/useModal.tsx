@@ -5,7 +5,7 @@ export type UseModalClose<C> = (resolverValue: C) => void;
 export type UseModalOpen<P, C> = (props: P) => Promise<C>;
 
 export const useModal = <P, C>(
-  modalComponent: (close: UseModalClose<C>) => React.FunctionComponent<P>
+  modalComponent: (close: UseModalClose<C>) => (props: P) => React.ReactNode
 ): { open: UseModalOpen<P, C>; close: UseModalClose<C> } => {
   const modalsContext = useContext(ModalContext);
 

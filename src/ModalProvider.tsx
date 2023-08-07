@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ModalContext } from './ModalContext';
 
 export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
@@ -39,8 +39,10 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
     });
   }, []);
 
+  const contextValue = useMemo(() => ({ open, close }), [close, open]);
+
   return (
-    <ModalContext.Provider value={{ open, close }}>
+    <ModalContext.Provider value={contextValue}>
       {children}
       {Object.entries(renderedModals).map(
         ([modalKey, { component: ModalComponent, props }]) => (
